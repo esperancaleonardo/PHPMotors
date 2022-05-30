@@ -21,11 +21,9 @@ da avaliação como:
 
 ## Stack utilizada
 
-**Front-end:** React(react-ts), TypeScript, Vite (vite-js), TailwindCSS
+**Front-end:** HTML, CSS, JS
 
-**Back-end:** Node, Express, Prisma, Jest, SQLite
-
-**Modile:** React-Native, TypeScript, Expo
+**Back-end:** PHP, MySQL
 
 
 
@@ -59,7 +57,7 @@ Execute o script abaixo no mysql do xampp via workbench
   sql/banco.sql
 ```
 
-  opcionalmente crie 4 usuários via workbench e execute o script 
+  opcionalmente crie 4 usuários via workbench, usando INSERT INTO na tabela tb_usuario e execute o script 
 
 ```bash
   sql/tb_anuncio.sql
@@ -73,7 +71,7 @@ Acesse a seguinte URL no seu navegador
 
 ## Demonstração
 
-Veja o deploy [aqui]().
+Veja o deploy na web [aqui]().
 
 ## Autores
 
