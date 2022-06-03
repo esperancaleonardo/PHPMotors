@@ -3,18 +3,16 @@
 
 Repositório com os códigos desenvolvidos para a avaliação B2 da disciplina de Programação Web II.
 
-
-
 ## A Aplicação
 
-Foi proposto e desenvolvido uma aplicação web semelhante ao site/aplicativo da webmotors,
+Foi proposto e desenvolvido uma aplicação web semelhante ao site/aplicativo da `webmotors`,
 contendo usuários e anúncios criados por esses usuários. A aplicação atende os requisitos
 da avaliação como:
 
 - [x] possuir uma tela de login funcional.
 - [x] possuir menu de navegação com pelo menos 3 opções.
 - [x] usar banco de dados relacional.
-- [x] existir um CRUD funcionando na aplicação acessável pelo menu.
+- [x] existir um CRUD funcionando na aplicação acessível pelo menu.
 - [x] PHP escrito com uso de OO.
 - [x] criar acesso com banco de dados utilizando PDO.
 - [ ] hospedar o projeto na web.
@@ -25,8 +23,6 @@ da avaliação como:
 
 **Back-end:** PHP, MySQL
 
-
-
 ## Funcionalidades
 
 - Full Stack Development
@@ -34,12 +30,10 @@ da avaliação como:
 - CRUD de anúncios, sem a opção de edição, por qualquer usuário da aplicação
 - Login e controle de acesso
 
-
 ## Aprendizados
 
 Conceitos de desenvolvimento back-end com PHP, OO, Padrão MVC de estrutura de projetos
-e conexão do backend PHP com SGBD MySQL.
-
+e conexão do backend PHP com `SGBD` MySQL.
 
 ## Rodando localmente
 
@@ -57,13 +51,13 @@ Execute o script abaixo no mysql do xampp via workbench
   sql/banco.sql
 ```
 
-  opcionalmente crie 4 usuários via workbench, usando INSERT INTO na tabela tb_usuario e execute o script 
+  opcionalmente crie 4 usuários via workbench, usando INSERT INTO na tabela tb_usuario e execute o script
 
 ```bash
   sql/tb_anuncio.sql
 ```
 
-Acesse a seguinte URL no seu navegador 
+Acesse a seguinte URL no seu navegador
 
 ```bash
   http://localhost/B2_evoluido/src/
@@ -71,10 +65,9 @@ Acesse a seguinte URL no seu navegador
 
 ## Demonstração
 
-Veja o deploy na web [aqui]().
+Veja o deploy na web [aqui](http://phpmotorsunisale.tk/).
 
 ## Autores
 
 - [@esperancaleonardo](https://www.github.com/esperancaleonardo)
 - [@igordomingues](https://www.github.com/esperancaleonardo)
-
