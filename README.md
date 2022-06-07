@@ -51,7 +51,7 @@ Execute o script abaixo no mysql do xampp via workbench
   sql/banco.sql
 ```
 
-  opcionalmente crie 4 usuários via workbench, usando INSERT INTO na tabela tb_usuario e execute o script
+  opcionalmente execute o script
 
 ```bash
   sql/tb_anuncio.sql
