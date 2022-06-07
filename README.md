@@ -15,7 +15,7 @@ da avaliação como:
 - [x] existir um CRUD funcionando na aplicação acessível pelo menu.
 - [x] PHP escrito com uso de OO.
 - [x] criar acesso com banco de dados utilizando PDO.
-- [ ] hospedar o projeto na web.
+- [x] hospedar o projeto na web.
 
 ## Stack utilizada
 
@@ -65,7 +65,7 @@ Acesse a seguinte URL no seu navegador
 
 ## Demonstração
 
-Veja o deploy na web [aqui](http://phpmotorsunisale.tk/).
+Veja o deploy na web [aqui](http://phpmotorsunisale.tk/) ou [aqui](https://b2-unisale-2022-php.000webhostapp.com/).
 
 ## Autores
 
