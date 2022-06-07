@@ -1,0 +1,11 @@
+DISPONIVEL EM 
+
+https://b2-unisale-2022-php.000webhostapp.com/view/views/home.php
+
+OU 
+
+http://phpmotorsunisale.tk/
+
+
+O PRIMEIRO SQL é para criar o banco e o usuario admin, o segundo é para popular o banco 
+com anuncios (necessário criar 4 usuaários pelo site antes)

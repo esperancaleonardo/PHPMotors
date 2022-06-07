@@ -42,7 +42,7 @@ if (isset($_SESSION['logado']) && $_SESSION['logado'] == true) {
 
   $form_editar = "<form action='Edicao.php' method='post' id='form_editar' name='form_editar'>
                     <input type='text' id='usuario_id_editar' name='usuario_id_editar' hidden value=" . $usuario_logado->get_usuario_id() . " ></input>
-                    <button type='submit' id='submit_btn'>EDITAR</button>
+                    <button class='btn-edt' type='submit' id='submit_btn'>EDITAR</button>
                   </form>";
 
   $perfil = str_replace("<!--FORMEDITARUSUARIO-->", $form_editar, $perfil);
@@ -83,22 +83,22 @@ if (isset($_SESSION['logado']) && $_SESSION['logado'] == true) {
 
   if (sizeof($anuncios_usuario) > 0) {
 
-    $anuncios_usuario_conteudo = '<div style="display: flex; align-content: center; flex-wrap: wrap; gap: 2rem">';
+    $anuncios_usuario_conteudo = '<div class="conteudo">';
 
     foreach ($anuncios_usuario as $anuncio) {
-      $anuncios_usuario_conteudo .= '<div style="box-sizing: border-box; border: 1pt solid black">';
+      $anuncios_usuario_conteudo .= '<div class="cards"><div class="card-item">';
       $anuncios_usuario_conteudo .= '<img src="' . $anuncio['anun_imagem'] . '" alt="" width=300/>';
 
       $anuncios_usuario_conteudo .= "<form action='../../controller/deletar_anuncio.php' method='post' id='form_excluir_anuncio' name='form_excluir_anuncio'>
-                                      <input type='text' id='anuncio_id_excluir' name='anuncio_id_excluir' hidden value=" . $anuncio['anun_id'] . " ></input>
-                                      <button type='submit' id='submit_btn'>EXCLUIR</button>
+                                      <input type='text' id='anuncio_id_excluir' name='anuncio_id_excluir' hidden value=" . '10' . " ></input>
+                                      <button class='btn-edt type='submit' id='submit_btn'>EXCLUIR</button>
                                     </form>";
 
-      $anuncios_usuario_conteudo .= '<h3>' . $anuncio['anun_titulo'] . '</h3>';
-      $anuncios_usuario_conteudo .= '<h4>R$ ' . number_format($anuncio['anun_valor'], 2, ",", ".") . '</h4>';
-      $anuncios_usuario_conteudo .= '<h5>' . $anuncio['usuario_nome'] . '</h5>';
-      $anuncios_usuario_conteudo .= '<p>' . $anuncio['anun_descricao'] . '</p>';
-      $anuncios_usuario_conteudo .= '</div>';
+      $anuncios_usuario_conteudo .= '<div class="card-info"> <h3>' . $anuncio['anun_titulo'] . '</h3>';
+      $anuncios_usuario_conteudo .= '<h2 class="card-tittle" >R$ ' . number_format($anuncio['anun_valor'], 2, ",", ".") . '</h2>';
+      $anuncios_usuario_conteudo .= '<h4 class="card-subtitle">' . $anuncio['usuario_nome'] . '</h4>';
+      $anuncios_usuario_conteudo .= '<p class="card-intro">' . $anuncio['anun_descricao'] . '</p></div>';
+      $anuncios_usuario_conteudo .= '</div></div>';
     }
 
     $anuncios_usuario_conteudo .= '</div>';

@@ -1,8 +1,21 @@
-<form action="../../controller/realizar_cadastro.php" method="post">
-  <input type="text" name="nome" id="nome" placeholder="nome" />
-  <input type="text" name="email" id="email" placeholder="email" />
-  <input type="text" name="cpf" id="cpf" placeholder="cpf" />
-  <input type="password" name="senha" id="senha" placeholder="senha" />
-  <input type="date" name="dt_nasc" id="dt_nasc" placeholder="data nasc" />
-  <input type="submit" value="Cadastrar" />
-</form>
+<div class="body-content">
+  <div class="module">
+    <h1>Cadastrar</h1>
+    <form
+      id="form-cadastro"
+      class="form"
+      action="../../controller/realizar_cadastro.php"
+      method="post"
+      autocomplete="off"
+    >
+      <input type="text" placeholder="Nome" name="nome" required />
+      <input type="text" placeholder="Email" name="email" required />
+      <input type="text" placeholder="CPF" name="cpf" required />
+      <input type="password" placeholder="senha" name="senha" />
+      <input type="date" placeholder="data nasc" name="dt_nasc" id="dt_nasc" />
+      <button type="submit" value="Cadastrar" class="btn btn-block btn-primary">
+        Cadastrar
+      </button>
+    </form>
+  </div>
+</div>

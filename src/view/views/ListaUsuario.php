@@ -35,10 +35,10 @@ $pagina = str_replace("<!--OPCOESUSUARIO-->", $opcoes, $pagina);
 $usuarios = $db->get_all_users();
 
 if (sizeof($usuarios) > 0) {
-  $conteudo_usuarios = '<div><h1>Usuários Cadastrados</h1></div>';
-  $conteudo_usuarios = $conteudo_usuarios . '<div style="display: flex; align-items: center; border: 1pt solid blue;">';
-  $conteudo_usuarios = $conteudo_usuarios . '<table style="border: 1pt solid black">';
-  $conteudo_usuarios = $conteudo_usuarios . '<thead><th>email</th><th>cpf</th><th>data cadastro</th></thead><tbody>';
+  $conteudo_usuarios = '<div style=" display:flex;justify-content:center; align-items:center;"><h1>Usuários Cadastrados</h1></div>';
+  $conteudo_usuarios = $conteudo_usuarios . '<div style="display:flex;justify-content:center;align-itens:center; margin:0 auto;padding-inline: auto;">';
+  $conteudo_usuarios = $conteudo_usuarios . '<table class="table-data" id="table-usuarios">';
+  $conteudo_usuarios = $conteudo_usuarios . '<thead><th>email</th><th>cpf</th><th>data cadastro </th><th>ações</th></thead><tbody>';
 
   foreach ($usuarios as $usuario) {
 
@@ -47,12 +47,12 @@ if (sizeof($usuarios) > 0) {
 
     $conteudo_usuarios = $conteudo_usuarios . "<td><form action='Edicao.php' method='post' id='form_editar' name='form_editar'>
                                                 <input type='text' id='usuario_id_editar' name='usuario_id_editar' value=" . $usuario->get_usuario_id() . " hidden></input>
-                                                <button type='submit' id='submit_btn'>EDITAR</button>
+                                                <button class='btn-edt' type='submit' id='submit_btn'>EDITAR</button>
                                             </form>";
 
     $conteudo_usuarios = $conteudo_usuarios . "<form action='../../controller/realizar_delecao.php' method='post' id='form_excluir' name='form_excluir'>
                                                 <input type='text' id='usuario_id_excluir' name='usuario_id_excluir' value=" . $usuario->get_usuario_id() . " hidden ></input>
-                                                <button type='submit' id='submit_btn' >EXCLUIR</button>
+                                                <button class='btn-edt' type='submit' id='submit_btn' >EXCLUIR</button>
                                             </form></td></tr>";
   }
 

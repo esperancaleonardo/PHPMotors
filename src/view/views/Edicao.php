@@ -33,15 +33,16 @@ $pagina = str_replace("<!--OPCOESUSUARIO-->", $opcoes, $pagina);
 
 $dados = $db->get_usuario_by_id($_POST['usuario_id_editar']);
 
-$form_edicao = '<form action="../../controller/realizar_edicao.php" method="post">';
+$form_edicao = '<div class="login-page"><div class="form">
+                <form class="login-form" action="../../controller/realizar_edicao.php" method="post">';
 $form_edicao = $form_edicao . '<input type="text" name="usuario_id_edicao" id="usuario_id_edicao" placeholder="" hidden value="' . $dados['usuario_id'] . '"/>';
 $form_edicao = $form_edicao . '<input type="text" name="nome" id="nome" placeholder="" value="' . $dados['usuario_nome'] . '"/>';
 $form_edicao = $form_edicao . '<input type="text" name="email" id="email" placeholder="" value="' . $dados['usuario_email'] . '"/>';
 $form_edicao = $form_edicao . '<input type="text" name="cpf" id="cpf" placeholder="" value="' . $dados['usuario_cpf'] . '"/>';
 $form_edicao = $form_edicao . '<input type="password" name="senha" id="senha" placeholder="" value = "' . $dados['usuario_senha'] . '" />';
 $form_edicao = $form_edicao . '<input type="date" name="dt_nasc" id="dt_nasc" placeholder="" value = "' . explode(" ", $dados['usuario_dt_nasc'])[0] . '" />';
-$form_edicao = $form_edicao . '<input type="submit" value="Atualizar Dados" />';
-$form_edicao = $form_edicao . '</form>';
+$form_edicao = $form_edicao . '<button type="submit" value="Atualizar Dados">Alterar </button>';
+$form_edicao = $form_edicao . '</form></div></div>';
 
 $pagina = str_replace("<!--CONTEUDO-->", $form_edicao, $pagina);
 

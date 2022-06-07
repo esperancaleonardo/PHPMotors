@@ -1,14 +1,31 @@
-<h2>Insira os dados do anúncio a ser cadastrado.</h2>
+<div class="body-content" id="bc-anuncio">
+  <div class="module" id="bc-module">
+    <h1>Insira os dados do anúncio a ser cadastrado.</h1>
 
-<form
-  action="../../controller/cadastrar_anuncio.php"
-  method="post"
-  enctype="multipart/form-data"
->
-  <input type="file" name="imagem" , id="imagem" />
-  <input type="text" name="titulo" id="titulo" placeholder="titulo" />
-  <input type="number" name="valor" id="valor" placeholder="valor" />
-  <input type="text" name="descricao" id="descricao" placeholder="descricao" />
-  <input type="date" name="data_anuncio" id="data_anuncio" />
-  <input type="submit" value="Cadastrar Anuncio" />
-</form>
+    <form
+      id="form-anuncio"
+      class="form"
+      action="../../controller/cadastrar_anuncio.php"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <input type="file" name="imagem" , id="imagem" />
+      <input type="text" name="titulo" id="titulo" placeholder="Título" />
+      <input type="number" name="valor" id="valor" placeholder="Valor" />
+      <input
+        type="text"
+        name="descricao"
+        id="descricao"
+        placeholder="descrição"
+      />
+      <input type="date" name="data_anuncio" id="data_anuncio" />
+      <button
+        class="btn btn-block btn-primary"
+        type="submit"
+        value="Cadastrar Anuncio"
+      >
+        Cadastrar Anúncio
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,7 +1,16 @@
 <?php
 
-require('Usuario.php');
-require('Anuncio.php');
+try{
+require($_SERVER['DOCUMENT_ROOT'] . '/model/Usuario.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/model/Anuncio.php');    
+}
+catch (Exception $e){
+require('./model/Usuario.php');
+require('./model/Anuncio.php');    
+    
+}
+
+
 
 class Database
 {
@@ -15,9 +24,9 @@ class Database
   function __construct()
   {
     $this->host = 'localhost';
-    $this->db   = 'db_b2_unisale';
-    $this->user = 'root';
-    $this->pass = '';
+    $this->db   = 'id19042508_db_b2_unisale';
+    $this->user = 'id19042508_root';
+    $this->pass = 'ATBz%@=!3]HC#bWX';
     $this->charset = 'utf8';
 
     $this->dsn = "mysql:host=$this->host;dbname=$this->db;charset=$this->charset";

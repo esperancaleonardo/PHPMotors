@@ -39,11 +39,11 @@ $anuncios = $db->get_all_anuncios();
 
 
 $conteudo_anuncios = '<h1>Anúncios Ativos na Plataforma</h1>
-<div style="display: flex; align-content: center; flex-wrap: wrap; gap: 2rem">';
+<div class="container"><div class="conteudo" style="margin: 30px">';
 
 
 foreach ($anuncios as $anuncio) {
-  $conteudo_anuncios = $conteudo_anuncios . '<div style="width: 30%; box-sizing: border-box; border: 1pt solid black">';
+  $conteudo_anuncios = $conteudo_anuncios . '<div class="cards"> <div class="card-item">';
   $conteudo_anuncios = $conteudo_anuncios . '<img src="' . $anuncio['anun_imagem'] . '" alt="" width=300/>';
 
   if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
@@ -51,17 +51,17 @@ foreach ($anuncios as $anuncio) {
     $conteudo_anuncios = $conteudo_anuncios .
       "<form action='../../controller/deletar_anuncio.php' method='post' id='form_excluir_anuncio' name='form_excluir_anuncio'>
           <input type='text' id='anuncio_id_excluir' name='anuncio_id_excluir' hidden value=" . $anuncio['anun_id'] . " ></input>
-          <button type='submit' id='submit_btn'>EXCLUIR</button>
+          <button class='btn-edt' type='submit' id='submit_btn'>EXCLUIR</button>
         </form>";
   }
-  $conteudo_anuncios = $conteudo_anuncios . '<h3>' . $anuncio['anun_titulo'] . '</h3>';
-  $conteudo_anuncios = $conteudo_anuncios . '<h4>R$ ' . number_format($anuncio['anun_valor'], 2, ",", ".") . '</h4>';
-  $conteudo_anuncios = $conteudo_anuncios . '<h5>' . $anuncio['usuario_nome'] . '</h5>';
-  $conteudo_anuncios = $conteudo_anuncios . '<p>' . $anuncio['anun_descricao'] . '</p>';
-  $conteudo_anuncios = $conteudo_anuncios . '</div>';
+  $conteudo_anuncios = $conteudo_anuncios . '<div class="card-info"> <h3>' . $anuncio['anun_titulo'] . '</h3>';
+  $conteudo_anuncios = $conteudo_anuncios . '<h2 class="card-tittle">R$ ' . number_format($anuncio['anun_valor'], 2, ",", ".") . '</h2>';
+  $conteudo_anuncios = $conteudo_anuncios . '<h4 class="card-subtitle">' . $anuncio['usuario_nome'] . '</h4>';
+  $conteudo_anuncios = $conteudo_anuncios . '<p class="card-intro">' . $anuncio['anun_descricao'] . '</p></div>';
+  $conteudo_anuncios = $conteudo_anuncios . '</div></div>';
 }
 
-$conteudo_anuncios = $conteudo_anuncios . '</div>';
+$conteudo_anuncios = $conteudo_anuncios . '</div></div>';
 
 $pagina = str_replace("<!--CONTEUDO-->", $conteudo_anuncios, $pagina);
 
