@@ -1,4 +1,3 @@
-
 # B2 - Programação Web II
 
 Repositório com os códigos desenvolvidos para a avaliação B2 da disciplina de Programação Web II.
@@ -51,7 +50,7 @@ Execute o script abaixo no mysql do xampp via workbench
   sql/banco.sql
 ```
 
-  opcionalmente execute o script
+opcionalmente execute o script
 
 ```bash
   sql/tb_anuncio.sql
@@ -70,4 +69,4 @@ Veja o deploy na web [aqui](http://phpmotorsunisale.tk/) ou [aqui](https://b2-un
 ## Autores
 
 - [@esperancaleonardo](https://www.github.com/esperancaleonardo)
-- [@igordomingues](https://www.github.com/esperancaleonardo)
+- [@igordomingues](https://github.com/IgorPD)
